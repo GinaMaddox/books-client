@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   namespace :client do
     get '/books' => 'books#index'
     get '/books/new' => 'books#new'
-    get '/books/:id' => 'books#show'
     post '/books' => 'books#create'
+    get '/books/:id' => 'books#show'
     get '/books/:id/edit' => 'books#edit'
     patch '/books/:id' => 'books#update'
     delete '/books/:id' => 'books#destroy'

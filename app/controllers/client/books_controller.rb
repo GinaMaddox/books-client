@@ -12,4 +12,8 @@ class Client::BooksController < ApplicationController
     render "show.html.erb"
   end
 
+  def new
+    render "new.html.erb"
+  end
+
 end
