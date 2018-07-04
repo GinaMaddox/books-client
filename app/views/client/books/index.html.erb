@@ -1,0 +1,10 @@
+<!-- hello -->
+
+<% @books.each do |book| %>
+  <p>id: <%= book['id'] %></p>
+  <p>title: <a href="/client/books/<%= book['id'] %>"><%= book['title'] %></a></p>
+  <p>author: <%= book['author'] %></p>
+  <p>publisher: <%= book['publisher'] %></p>
+  <p>genre: <%= book['genre'] %></p>
+  <hr>
+<% end %>
