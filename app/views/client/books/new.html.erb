@@ -1,5 +1,6 @@
 
-<form action="/client/books" method="post">
+<!-- <form action="/client/books" method="post"> -->
+<%= form_tag "/client/books", method: :post do %>
   <div>
     Title:<input type="text" name="title">
   </div>
@@ -13,4 +14,5 @@
     Genre:<input type="text" name="genre">
   </div>
   <input type="submit" value="Submit Form">
-</form>
+<% end %>
+<!-- </form> -->
