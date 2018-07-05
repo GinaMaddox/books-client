@@ -52,6 +52,4 @@ class Client::BooksController < ApplicationController
     response = Unirest.delete("localhost:3000/api/books/#{book_id}")
     render "destroy.html.erb"
   end
-
-
 end
