@@ -27,5 +27,11 @@ class Client::BooksController < ApplicationController
     @book = response.body
     render "show.html.erb"
   end
-
+ 
+  def edit
+    book_id = params[:id]
+    response = Unirest.get("localhost:3000/api/books/#{book_id}")
+    @book = response.body
+    render "edit.html.erb"
+  end
 end

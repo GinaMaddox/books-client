@@ -1,0 +1,15 @@
+<%= form_tag "/client/books/#{@book['id']}", method: :patch do %>
+  <div>
+    Title:<input type="text" name="title" value="<%= @book['title']%>">
+  </div>
+  <div>
+    Author:<input type="text" name="author" value="<%= @book['author']%>">
+  </div>
+  <div>
+    Publisher:<input type="text" name="publisher" value="<%= @book['publisher']%>">
+  </div>
+  <div>
+    Genre:<input type="text" name="genre" value="<%= @book['genre']%>">
+  </div>
+  <input type="submit" value="Submit Changes">
+<% end %>
