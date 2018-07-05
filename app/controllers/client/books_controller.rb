@@ -16,4 +16,16 @@ class Client::BooksController < ApplicationController
     render "new.html.erb"
   end
 
+  def create
+    response = Unirest.post("localhost:3000/api/books",
+      parameters: {
+        title: params[:title] ,
+        author: params[:author],
+        publisher: params[:publisher] ,
+        genre: params[:genre]
+      })
+    @book = response.body
+    render "show.html.erb"
+  end
+
 end
