@@ -12,4 +12,8 @@
     Genre:<input type="text" name="genre" value="<%= @book['genre']%>">
   </div>
   <input type="submit" value="Submit Changes">
-<% end %>
+  <% end %>
+
+  <%= form_tag "/client/books/#{@book['id']}", method: :delete do %>
+  <input type="submit" value="Delete Item">
+  <% end %>

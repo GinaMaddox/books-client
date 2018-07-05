@@ -6,5 +6,11 @@
   <p>author: <%= book['author'] %></p>
   <p>publisher: <%= book['publisher'] %></p>
   <p>genre: <%= book['genre'] %></p>
+  
+<%= form_tag "/client/books", method: :delete do %>
+  <input type="submit" value="Delete">
   <hr>
+  <% end %>
 <% end %>
+
+
